@@ -71,12 +71,26 @@
     display: block;
     position: absolute;
     padding: 10px;
-    top: 400px;
+    top: 360px;
     color: #003153;
     background-color: #4694D6;
     font-size: 48px;
     margin: 0 auto;
     text-align: center;
+    right: 40px;
+}
+
+#profile-pic {
+    height: 200px;
+    width: auto;
+    z-index: 1;
+    position: absolute;
+    top: 240px;
+    left: 100px;
+}
+
+.main-container {
+    z-index: -1;
 }
 
 .main-container li {
@@ -96,25 +110,33 @@
 
 .about-me p {
     width: 95%;
+    text-align: left;
 }
 
-.work {
+.work-section {
     display: flex;
     flex-flow: column;
     width: 100%;
 }
 
-.work h1 {
+.work-section h1 {
     color: #003153;
     border-bottom: #003153 solid 4px;
     width: 95%;
 }
 
-.work div img {
-    background-color: #003153;
-    height: 300px;
+.work-link {
+    height: 250px;
     width: 95%;
-    margin: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin: 15px;
+    background-image: url(../images/23B0CBA5-A12F-4B23-B4FB-6375AB1C1521.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    z-index: 1;
 }
 
 .contact h1 {
@@ -179,6 +201,12 @@
         right: 100px;
     }
 
+    #profile-pic {
+        top: 130px;
+        height: 180px;
+        left: 30px;
+    }
+
     .main-container {
         display: flex;
         flex-direction: column nowrap;
@@ -197,7 +225,6 @@
         border-right: #003153 solid 4px;
         padding-right: 60px;
         font-size: 52px;
-        width: min-content;
         text-align: right;
         width: 100px;
         display: flex;
@@ -219,7 +246,7 @@
         font-size: 24px;
     }
 
-    .work {
+    .work-section {
         display: flex;
         flex-flow: row wrap;
     }
@@ -228,13 +255,14 @@
         width: 80%;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
     }
 
-    .work-container img {
+    .work-link {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-around;
+        position: relative;
+        top: 15px;
         flex: 1 1 45%;
     }
 
@@ -253,5 +281,6 @@
     #contact-list {
         display: flex;
         flex-flow: row nowrap;
+        align-items: center;
     }
 }
