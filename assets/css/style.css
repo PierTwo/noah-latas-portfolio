@@ -1,27 +1,41 @@
+/* Sets font family to Iceland */
 .iceland {
     font-family: Iceland;
 }
 
+/* Sets font familyy to Jura */
 .jura {
     font-family: Jura;
 }
 
+/* Sets font color to dark blue */
+.color-dark-blue {
+    color: #003153;
+}
+
+/* Creates a bottom border for mobile */
+.border-bottom-dark {
+    border-bottom: #003153 solid 4px;
+    width: 100%;
+}
+
+/* Styles the  main header */
 .header {
     width: 100%;
     height: 120px;
     background-color: #003153;
-    position: absolute;
-    top: 80px;
+    position: relative;
+    top: 0px;
     left: 0px;
     margin: 0%;
 }
 
+/* Styles the header with name */
 #header-name {
     width: 100%;
     height: 80px;
     background-color: #4694D6;
-    color: #003153;
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 0px;
     margin: 0%;
@@ -33,12 +47,14 @@
     align-items: center;
 }
 
+/* Positions nav in header */
 .header-nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Styles the font of the header nav */
 .header-nav a {
     color: #4694D6;
     margin: 15px;
@@ -49,30 +65,25 @@
     text-decoration: none;
 }
 
-#hero-container {
-    display: flex;
-    justify-content: center;
-}
-
+/* Adds hero image and positions it */
 #hero {
-    position: absolute;
+    position: relative;
     margin: 0px;
     width: 100%;
     height: 300px;
     left: 0px;
-    top: 200px;
+    top: 0px;
     background-image: url(../images/binary_code_banner_design_2510.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
+/* Adds and positions subtitle on hero image */
 #hero-subtitle {
-    display: block;
     position: absolute;
     padding: 10px;
     top: 360px;
-    color: #003153;
     background-color: #4694D6;
     font-size: 48px;
     margin: 0 auto;
@@ -80,6 +91,7 @@
     right: 40px;
 }
 
+/* Adds and positions profile pic for hero image */
 #profile-pic {
     height: 200px;
     width: auto;
@@ -89,88 +101,87 @@
     left: 100px;
 }
 
+/* Sets position of main container relative to the rest of the page */
 .main-container {
-    z-index: -1;
-}
-
-.main-container li {
-    list-style: none;
     position: relative;
-    top: 500px
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 0;
 }
 
-.about-me {
-    color: #003153;
-}
-
-.about h1 {
-    border-bottom: #003153 solid 4px;
+/* Sets width for ul list in main container */
+.main-container ul {
     width: 95%;
 }
 
-.about-me p {
-    width: 95%;
+/* Removes list style from main container ul */
+.main-container ul li {
+    list-style: none;
+}
+
+/* Sets size and aligns text for p element in the about section */
+.about p {
+    font-size: 38px;
+    width: 100%;
     text-align: left;
 }
 
-.work-section {
+/* Makes the work/contact section a flexbox */
+.work-section,
+.contact {
     display: flex;
-    flex-flow: column;
-    width: 100%;
+    flex-flow: column nowrap;
 }
 
-.work-section h1 {
-    color: #003153;
-    border-bottom: #003153 solid 4px;
-    width: 95%;
-}
-
-.work-link {
-    height: 250px;
-    width: 95%;
+/* Styles the work a elements with an image and position */
+.work-container a {
+    height: 200px;
     position: relative;
     display: flex;
-    align-items: flex-start;
     margin: 15px;
     background-image: url(../images/23B0CBA5-A12F-4B23-B4FB-6375AB1C1521.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% 30%;
     z-index: 1;
+    border: #003153 solid 4px;
 }
 
-.contact h1 {
-    color: #003153;
-    border-bottom: #003153 solid 4px;
-    width: 95%;
-}
-
-#contact-list {
-    display: flex;
-    flex-flow: column;
-    position: relative;
-    justify-content: center;
-    bottom: 500px;
-    padding-bottom: 50px;
-    width: 100%;
-}
-
-#contact-list a {
+/* Styles the a elements for the contact section */
+.contact a {
+    font-size: 28px;
     text-decoration: none;
-    font-size: 32px;
     border-bottom: #003153 solid 4px;
-    color: #003153;
-    margin: 30px;
+    width: fit-content;
 }
 
-#contact-list li {
+/* Positions footer and adds a background color */
+#footer {
+    background-color: #003153;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    bottom: 0px;
+}
+
+/* Styles the h1 element within the footer */
+#footer h1 {
+    font-size: 42px;
+    background-color: #4694D6;
+    padding: 0px;
     margin: 15px;
 }
 
-
+/* Sets layout for larger screens */
 @media screen and (min-width: 992px) {
+
     .header {
         top: 0px;
+        left: 0px;
+        position: absolute;
     }
 
     #header-name {
@@ -182,6 +193,7 @@
 
     .header-nav {
         position: relative;
+        top: 0px;
         align-items: center;
         justify-content: flex-end;
     }
@@ -192,8 +204,10 @@
     }
 
     #hero {
-        top: 120px;
+        top: 60px;
+        position: relative;
         height: 200px;
+        margin-bottom: 20px;
     }
 
     #hero-subtitle {
@@ -232,15 +246,16 @@
         align-items: flex-start;
     }
 
-    .about {
+    .about,
+    .contact,
+    .work-section {
         display: flex;
         flex-flow: row nowrap;
         position: relative;
-
+        width: 100%;
     }
 
     .about p {
-        width: 80%;
         margin: 20px;
         text-align: left;
         font-size: 24px;
@@ -248,39 +263,42 @@
 
     .work-section {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     }
 
     .work-container {
-        width: 80%;
-        display: flex;
+        display: inline-flex;
         flex-flow: row wrap;
+        flex: 1 1 100%;
+        min-width: 100%;
     }
 
-    .work-link {
+    .work-container a {
+        height: 250px;
+        width: 44%;
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        position: relative;
-        top: 15px;
-        flex: 1 1 45%;
     }
 
     #work-1 {
-        display: flex;
         flex: 2 1 100%;
-        min-width: 80%;
+        max-width: 90%;
     }
 
     .contact {
-        display: flex;
-        flex-flow: row nowrap;
-        position: relative;
+        align-items: center;
+        justify-content: center;
     }
 
-    #contact-list {
+    .contact h1 {
         display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
+        justify-content: left;
+        position: absolute;
+        left: 0px;
     }
+
+    .contact a {
+        align-items: center;
+        margin: 25px;
+    }
+
 }
